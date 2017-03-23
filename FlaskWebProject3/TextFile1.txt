@@ -1,0 +1,39 @@
+stringy = [];
+        username = 1;
+        for (x = 0; x < sessionStorage.length; x++) {
+            stringy[x] = sessionStorage.key(x);
+            //post("/testdata", { name: sessionStorage.key(x) });
+        }
+        var result = ""
+        var isFirst = true
+        stringy.forEach(function (item) {
+            if (isFirst == false) {
+                result += ",";
+            } else {
+                isFirst = false;
+            }
+            result += item;
+        });
+        //alert(result);
+        $.ajax({
+            type: "POST",
+            url: "/testdata",
+            data: { name: result },
+            success: function (data) {
+                data = JSON.parse(data);
+            }
+        });
+
+
+
+
+    def home():
+        return render_template('index.html')
+    def w1():
+        return render_template('w1.html')
+    def ttev1(a):
+        return render_template('ttev1.html', a)
+    def ttev2():
+        return render_template('ttev2.html')
+    def w2():
+        return render_template('w2.html')
