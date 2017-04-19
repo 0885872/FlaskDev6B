@@ -6,8 +6,6 @@ It contains the definition of routes and views for the application.
 from flask import Flask, url_for
 from flask.templating import render_template
 import mysql.connector
-import database
-import Controller
 from flask import json
 from flask import jsonify
 app = Flask(__name__)
@@ -32,7 +30,7 @@ def ttev1():
 def jsoninize():
     a = []
     sql1 = "SELECT answer FROM ttev1;";
-    db = mysql.connector.connect(user="root", passwd="usbw", host="192.168.178.52",database="dev6")
+    db = mysql.connector.connect(user="root", passwd="usbw", host="vvdsl2.xs4all.nl",database="dev6")
     execute = db.cursor()
     execute.execute(sql1)
     answer = execute.fetchall()
@@ -53,7 +51,7 @@ def jsoninize():
 @app.route('/answersttev2.json')
 def jsoni():
     sql1 = "SELECT answer FROM ttev2;";
-    db = mysql.connector.connect(user="root", passwd="usbw", host="192.168.178.52",database="dev6")
+    db = mysql.connector.connect(user="root", passwd="usbw", host="vvdsl2.xs4all.nl",database="dev6")
     execute = db.cursor()
     execute.execute(sql1)
     answer = execute.fetchall()
@@ -76,7 +74,7 @@ def jsoni():
 def jsoniz():
     a = []
     sql1 = "SELECT answer FROM w1;";
-    db = mysql.connector.connect(user="root", passwd="usbw", host="192.168.178.52",database="dev6")
+    db = mysql.connector.connect(user="root", passwd="usbw", host="vvdsl2.xs4all.nl",database="dev6")
     execute = db.cursor()
     execute.execute(sql1)
     answer = execute.fetchall()
@@ -98,7 +96,7 @@ def jsoniz():
 @app.route('/answersw2.json')
 def jsonize():
     sql1 = "SELECT answer FROM w2;";
-    db = mysql.connector.connect(user="root", passwd="usbw", host="192.168.178.52",database="dev6")
+    db = mysql.connector.connect(user="root", passwd="usbw", host="vvdsl2.xs4all.nl",database="dev6")
     execute = db.cursor()
     execute.execute(sql1)
     answer = execute.fetchall()

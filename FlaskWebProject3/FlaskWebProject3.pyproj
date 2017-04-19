@@ -32,7 +32,13 @@
     <Compile Include="Controller.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="fileTest.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="templates\model.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="valueTest.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
