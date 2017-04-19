@@ -35,6 +35,9 @@
     <Compile Include="fileTest.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="fileTestFail.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="templates\model.py">
       <SubType>Code</SubType>
     </Compile>
